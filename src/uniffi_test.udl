@@ -1,0 +1,24 @@
+enum ClientOrigin {
+  "TestsCLI",
+  "ProseAppMacOS",
+  "ProseAppIOS",
+  "ProseAppAndroid",
+  "ProseAppWindows",
+  "ProseAppLinux",
+  "ProseAppWeb",
+};
+
+[Error]
+enum LoginError {
+  "NoSuchUser",
+  "InvalidCredentials",
+};
+
+dictionary UserCredentials {
+  string jid;
+};
+
+namespace uniffi_test {
+  [Throws=LoginError]
+  UserCredentials login(string jid, string password, ClientOrigin origin);
+};
