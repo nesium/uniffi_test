@@ -1,2 +1,3 @@
 [bindings.swift]
-cdylib_name = "uniffi_test"
+cdylib_name = "prose_core"
+module_name = "ProseCore"
